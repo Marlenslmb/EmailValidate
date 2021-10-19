@@ -70,7 +70,6 @@ const useInput = (initialValue, validations) => {
 
 const Login = () => {
     const hints = ['gmail.com', 'mail.ru', 'yahoo.com', 'example.com', 'rambler.ru'] 
-    const [isSlide, setIsSlide] = useState(true)
     const email = useInput('', {isEmpty: true, minLength: 4, isEmail : true,})
     // Мне прилетали все данные, но меня заблокировали и я не могу зарегистрироваться снова и войти на старый акк. Не знаю почему.
     const AUTH_API = `https://api.kickbox.com/v2/verify?email=${email.value}&apikey=test_c6465cc71f08cfdfdd7bcc9bf91e132ecaddc44087dcaab64f2db56607f4c036`
